@@ -9,6 +9,7 @@
 # The purpose of this lab is to familiarize ourselves with
 # the Heap data structure. We were asked to complete and test
 #  the methods for the given Heap class.
+# (mawilliams7) Consider writing function docstrings to make method purpose more clear
 class Heap:
     def __init__(self):
         self.heap_array = []
@@ -24,7 +25,7 @@ class Heap:
         i = 0
         left = 2*i+1
         right = 2*i+2
-        
+        # (mawilliams7) I would separate this logic into another method as extract min should only be doing one task (extracting min)
         # The while loop will make sure
         # all valid postiions in the heap are populated
         # after extracting the minimum from the root.
@@ -48,6 +49,7 @@ class Heap:
         if(self.is_empty == 0):
             return       
         # Will check every elment starting from the end of the array to the ith index.
+        # (mawilliams7) This logic could be implemented in a single while loop. Unnecessary comparisons made in this implementation
         for i in range(len(self.heap_array)):
             k = len(self.heap_array) -1
             while(k >= i): 
